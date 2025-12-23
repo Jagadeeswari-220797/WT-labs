@@ -143,6 +143,15 @@
             margin: 5px 0;
             font-size: 14px;
         }
+    .media {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    }
+    .small{
+        width: 180px;
+    }
     </style>
 </head>
 <body>
@@ -198,6 +207,28 @@
             <button class="btn">Ratings & Reviews</button>
             <button class="btn">Feedback</button>
         </div>
+    </div>
+    <div class="section media">
+        <div class="box">
+        <h2>Our Location</h2>
+        <iframe
+            src="https://www.google.com/maps?q=india&output=embed"
+            loading="lazy" width="150px" height="200px">
+        </iframe>
+        </div>
+        <div class="box">
+            <h2>Watch Our Food Preparation</h2>
+        <video controls muted playsinline width="200px" height="200px">
+            <source src="c:\Users\JAGADEESHWARI\Downloads\video.mp4" type="video/mp4" >
+        </video>
+        </div>
+        <div class="box">
+        <h2>Enjoy Our Background Music</h2>
+        <br>
+        <audio controls class="small">
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        </audio>
+    </div>
     </div>
 
     <!-- Footer -->
