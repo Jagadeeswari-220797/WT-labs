@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Food Ordering</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h2>OnlineFood</h2>
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">Menu</a>
+            <a href="#">Contact</a>
+            <a href="#order">Order</a>
+            <a href="#login">Login</a>
+        </div>
+        <div class="search-container">
+             <input type="text" placeholder="Search food..." class="search-input">
+             <button class="search-btn">🔍</button>
+        </div>
+
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+        <h1>Welcome to World of Best Food</h1>
+        <p>Don't stop your cravings...!</p>
+        <button class="btn">Order Now</button>
+    </div>
+
+    <!-- Why Choose Us -->
+    <div class="section">
+        <h2>Why We Choose</h2>
+        <div class="boxes">
+            <div class="box">
+                <h3>Home Delivery</h3>
+                <p>Fast and safe delivery at your doorstep.</p>
+            </div>
+            <div class="box">
+                <h3>Best Quality</h3>
+                <p>Fresh ingredients and hygienic cooking.</p>
+            </div>
+            <div class="box">
+                <h3>Low Cost Food</h3>
+                <p>Affordable prices for everyone.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Discover Our Story -->
+    <div class="section story">
+        <h2>Discover Our Story</h2>
+        <div class="stats">
+            <div class="stat">120<span>Food Items</span></div>
+            <div class="stat">60<span>Cooks</span></div>
+            <div class="stat">75<span>Beverages</span></div>
+        </div>
+    </div>
+    <div class="section media">
+        <div class="box">
+        <h2>Our Location</h2>
+        <iframe
+            src="https://www.google.com/maps?q=india&output=embed"
+            loading="lazy" width="150px" height="200px">
+        </iframe>
+        </div>
+        <div class="box">
+            <h2>Watch tutorial</h2>
+        <video controls muted playsinline width="200px" height="200px">
+            <source src="c:\Users\JAGADEESHWARI\Downloads\video.mp4" type="video/mp4" >
+        </video>
+        </div>
+        <div class="box">
+        <h2>Enjoy Our Background Music</h2>
+        <br>
+        <audio controls class="small">
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    </div>
+     <div id="login" class="modal">
+        <div class="modal-box">
+            <h2>Login</h2>
+            <form action="#" method="post">
+               <input type="Email" placeholder="Email" required>
+               <input type="password" placeholder="Password" required>
+               <button type="submit">Login</button>
+            </form>
+            <a href="#" class="close">Close</a>
+        </div>
+    </div>
+    <!-- Order Food Section -->
+<div id="order" class="order-section">
+    <h2>Order Food</h2>
+
+    <form  class="order-form"action="#" method="post">
+        <label>Food Item</label>
+        <select required>
+            <option value="">Select Item</option>
+            <option>Burger</option>
+            <option>Pizza</option>
+            <option>Biryani</option>
+            <option>Noodles</option>
+        </select>
+
+        <label>Quantity</label>
+        <input type="number" min="1" placeholder="Enter quantity" required>
+
+        <label>Delivery Address</label>
+        <textarea rows="3" placeholder="Enter delivery address" required></textarea>
+
+        <label>Payment Method</label>
+        <select required>
+            <option value="">Select Payment</option>
+            <option>Cash on Delivery</option>
+            <option>UPI</option>
+            <option>Debit / Credit Card</option>
+        </select>
+
+        <button type="submit">Place Order</button>
+        <a href="#" class="close">Close</a>
+    </form>
+    
+    </div>
+    <div class="form-section">
+    <div class="form-box">
+        <h2>Ratings & Reviews</h2>
+        
+        <label>Name</label>
+        <input type="text" placeholder="Your name">
+
+        <label>Email</label>
+        <input type="email" placeholder="Your email">
+
+        <label>Rating</label>
+        <div class="options">
+            <input type="radio" name="rating"> ⭐
+            <input type="radio" name="rating"> ⭐⭐
+            <input type="radio" name="rating"> ⭐⭐⭐
+            <input type="radio" name="rating"> ⭐⭐⭐⭐
+            <input type="radio" name="rating"> ⭐⭐⭐⭐⭐
+        </div>
+
+        <label>Your Review</label>
+        <textarea rows="4" placeholder="Write your review..."></textarea>
+
+        <button class="btn">Submit Review</button>
+        <a href="#" class="close">Close</a>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>Online Food | World of Best Food</p>
+        <p>Contact Us : 9834567855</p>
+        <p>© 2025 Online Food Service. All Rights Reserved</p>
+    </div>
+    
+
+</body>
+</html>
