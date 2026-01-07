@@ -30,7 +30,7 @@
     <div class="hero">
         <h1>Welcome to World of Best Food</h1>
         <p>Don't stop your cravings...!</p>
-        <button class="btn">Order Now</button>
+        <button class="btn" id="popupbtn">Order Now</button>
     </div>
 
     <!-- Why Choose Us -->
@@ -127,10 +127,11 @@
     </form>
     
     </div>
-    <table border="1" rules="all" >
-        <caption>
-            TOP RATING FOOD AND IT'S PRICES
+    <table border="1" rules="all" width="700" cellspacing="20px" cellpadding="1spx" >
+        <caption style="color: crimson;">
+            <b>TOP RATING FOOD</b>
         </caption>
+        <tbody align="center">
         <tr>
             <th>FOOD ITEM </th><th>PRICE</th><th>RATING</th>
         </tr>
@@ -143,7 +144,22 @@
         <tr>
             <td>Mango milkshake</td><td>150/-</td><td>4.0</td>
         </tr>
+        <tr>
+            <td>Butter chicken </td><td>100/-</td><td>4.0</td>
+        </tr>
+        <tr>
+            <td>Sambar Idli</td><td>50/-</td><td>3.9</td>
+        </tr>
+        </tbody>
     </table>
+    <div class="section">
+        <h2>today's Special</h2>
+        <p id="foodinfo"></p>
+        <p id="priceinfo"></p>
+        <p id="quantityinfo"></p>
+        <button class="btn" id="incrorder">order one more</button>
+
+    </div>
     <div class="form-section">
     <div class="form-box">
         <h2>Ratings & Reviews</h2>
@@ -170,8 +186,13 @@
         <a href="#" class="close">Close</a>
     </div>
 </div>
-
-<script>
+    <!-- Footer -->
+    <div class="footer">
+        <p>Online Food | World of Best Food</p>
+        <p>Contact Us : 9834567855</p>
+        <p>© 2025 Online Food Service. All Rights Reserved</p>
+    </div>
+     <script>
         let v=123;
         const a="world best food"
         var s=56.78
@@ -179,17 +200,59 @@
         console.log(v);
         console.log(s)
         console.log(a)
-        document.write("food website");
+        //document.write("food website");
         let x;
         console.log(x)
         let d=null;
         console.log(d)
+        // variables
+        var foodname="chicken biryani";
+        let price=250;
+        let quantity=1;
+        console.log("food item:",foodname);
+        console.log("price:",price);
+        console.log("Quantity:",quantity);
+        /*quantity++;
+        console.log("Quantity:",quantity);*/ 
+        // the above line throw an error -reclaraton of variable using cont and let is not possible
+        document.getElementById("foodinfo").innerText="Food item:"+foodname;
+        document.getElementById("priceinfo").innerText="Price:"+price;
+        document.getElementById("quantityinfo").innerText="Quantity:"+quantity;
+        document.getElementById("incrorder").addEventListener("click", () => {
+           quantity++;
+           document.getElementById("quantityinfo").innerText ="Quatity:"+quantity;
+        });
+
+        // popup boxes
+        document.getElementById("popupbtn").addEventListener("click", function () {
+            alert("Welcome to OnlineFood!");
+            let order = confirm("Do you want to place the order?");
+            if(order){
+                let name=prompt("enter your name:");
+                if(name){
+                    alert("Thank you " + name+ "! Your order is placed.")
+                }
+                else{
+                    alert("Order is cancelled")
+                }
+            }
+        });
+        //functions
+        function calculate(qty,price){
+            return qty*price;
+        }
+        const total= function(){
+            let bill=calculate(quantity,price);
+            alert("Total bill: "+bill +"/-");
+        };
+        const changemsg=() =>{
+            document.querySelector(".hero h1").innerText="Order Fresh Food Instantly";
+        };
+        document.querySelector(".btn").addEventListener("mouseover",changemsg);
+        document.getElementById("incrorder").addEventListener("click",total);
+        
+
     </script>
-    <!-- Footer -->
-    <div class="footer">
-        <p>Online Food | World of Best Food</p>
-        <p>Contact Us : 9834567855</p>
-        <p>© 2025 Online Food Service. All Rights Reserved</p>
-    </div>
+
 </body>
 </html>
