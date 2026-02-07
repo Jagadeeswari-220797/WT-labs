@@ -1,39 +1,3 @@
-<?php
-include "db.php";
-
-if (isset($_POST['register'])) {
-
-    $username = $_POST['username'];
-    $email    = $_POST['email'];
-    $password = $_POST['password'];
-
-    $sql = "INSERT INTO userdetails (username,email, password)
-            VALUES ('$username','$email', '$password')";
-
-    if (mysqli_query($conn, $sql)) {
-        echo "<p style='color:green'>Registration successful</p>";
-    } else {
-        echo "<p style='color:red'>Registration failed</p>";
-    }
-}
-
-if (isset($_POST['login'])) {
-
-    $email    = $_POST['email'];
-    $password = $_POST['password'];
-
-    $sql = "SELECT * FROM userdetails 
-            WHERE email='$email' AND password='$password'";
-
-    $result = mysqli_query($conn, $sql);
-
-    if (mysqli_num_rows($result) == 1) {
-        echo "<p style='color:green'>Login successful</p>";
-    } else {
-        echo "<p style='color:red'>Invalid email or password</p>";
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
