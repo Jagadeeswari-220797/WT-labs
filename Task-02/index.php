@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,7 +88,7 @@
      <div id="login" class="modal">
         <div class="modal-box">
             <h2>Login</h2>
-            <form action="#" method="post">
+            <form action="login.php" method="post">
                <input type="Email" name="email" placeholder="Email" required>
                <input type="password" name="password" placeholder="Password" required>
                <button type="submit" name="login">Login</button>
@@ -98,8 +99,8 @@
     <div id="register" class="modal">
         <div class="modal-box">
             <h2>Register</h2>
-            <form action="#" method="post">
-               <input type="text" name="username" placeholder="Username" required">
+            <form action="register.php" method="post">
+               <input type="text" name="username" placeholder="Username" required>
                <input type="Email" name="email" placeholder="Email" required>
                <input type="password" name="password" placeholder="Password" required>
                <button type="submit" name="register">Register</button>
@@ -199,6 +200,21 @@
         <a href="#" class="close">Close</a>
     </div>
 </div>
+<div class="form-section">
+    <div class="form-box">
+        <h2>Upload Your File</h2>
+
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+
+            <label>Select File</label>
+            <input type="file" name="file" required>
+
+            <button type="submit" name="upload">Upload</button>
+
+        </form>
+    </div>
+</div>
+
     <!-- Footer -->
     <div class="footer">
         <p>Online Food | World of Best Food</p>
