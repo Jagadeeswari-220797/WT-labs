@@ -1,39 +1,4 @@
-<?php
-include "db.php";
 
-if (isset($_POST['register'])) {
-
-    $username = $_POST['username'];
-    $email    = $_POST['email'];
-    $password = $_POST['password'];
-
-    $sql = "INSERT INTO userdetails (username,email, password)
-            VALUES ('$username','$email', '$password')";
-
-    if (mysqli_query($conn, $sql)) {
-        echo "<p style='color:green'>Registration successful</p>";
-    } else {
-        echo "<p style='color:red'>Registration failed</p>";
-    }
-}
-
-if (isset($_POST['login'])) {
-
-    $email    = $_POST['email'];
-    $password = $_POST['password'];
-
-    $sql = "SELECT * FROM userdetails 
-            WHERE email='$email' AND password='$password'";
-
-    $result = mysqli_query($conn, $sql);
-
-    if (mysqli_num_rows($result) == 1) {
-        echo "<p style='color:green'>Login successful</p>";
-    } else {
-        echo "<p style='color:red'>Invalid email or password</p>";
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,7 +88,7 @@ if (isset($_POST['login'])) {
      <div id="login" class="modal">
         <div class="modal-box">
             <h2>Login</h2>
-            <form action="#" method="post">
+            <form action="login.php" method="post">
                <input type="Email" name="email" placeholder="Email" required>
                <input type="password" name="password" placeholder="Password" required>
                <button type="submit" name="login">Login</button>
@@ -134,8 +99,8 @@ if (isset($_POST['login'])) {
     <div id="register" class="modal">
         <div class="modal-box">
             <h2>Register</h2>
-            <form action="#" method="post">
-               <input type="text" name="username" placeholder="Username" required">
+            <form action="register.php" method="post">
+               <input type="text" name="username" placeholder="Username" required>
                <input type="Email" name="email" placeholder="Email" required>
                <input type="password" name="password" placeholder="Password" required>
                <button type="submit" name="register">Register</button>
@@ -235,6 +200,21 @@ if (isset($_POST['login'])) {
         <a href="#" class="close">Close</a>
     </div>
 </div>
+<div class="form-section">
+    <div class="form-box">
+        <h2>Upload Your File</h2>
+
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+
+            <label>Select File</label>
+            <input type="file" name="file" required>
+
+            <button type="submit" name="upload">Upload</button>
+
+        </form>
+    </div>
+</div>
+
     <!-- Footer -->
     <div class="footer">
         <p>Online Food | World of Best Food</p>
