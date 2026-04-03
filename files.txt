@@ -1,0 +1,13 @@
+web technologies
+Hello Welcome to php file functions.
+Computer Science Engineering (CSE) focuses on programming and software development.
+Students learn languages like C, Java, Python, and PHP.
+CSE also covers databases, web technologies, and networking.
+It helps in understanding how computers and applications work. 
+Graduates can become software developers, data analysts, or system engineers.
+CSE plays an important role in today’s digital world.
+
+Learning php file handlingweb technologies
+Learning php file handlingweb technologies
+Learning php file handlingweb technologies
+File Locked successfully
